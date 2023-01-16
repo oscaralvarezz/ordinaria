@@ -16,4 +16,4 @@ if __name__=="__main__":
     valores =  [103, 60, 70, 5, 15] 
     capacidad = 100
     resultado = mochila(pesos, valores, capacidad)
-    print(resultado)
+    print("El valor máximo que se puede llevar es: " , resultado)

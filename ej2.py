@@ -1,28 +1,31 @@
-class Nave():
-    def __init__(self, codigo, cohoerte, siglo, escuadra, trooper):
-        self.codigo = codigo
-        self.cohoerte = cohoerte
-        self.siglo = siglo
-        self.escuadra =escuadra
-        self.trooper = trooper
+class Stormtrooper():
+        def __init__(self, name, rango):
+            self.name = name
+            self.rango = rango
+            self.calificacion()
+            print('stromtrooper creado con exito!')
+        
+        def __str__(self):
+            return 'Stormtrooper: {} con rango {} y calificacion: {}'.format(self.name, self.rango, self.calificacion)
 
+        def calificacion(self):
+            for i in self.name:
+                if self.name == 'TK':
+                    print('{}codigo de legion {}'.format(self.name, self.rango))
+                if self.name == '8':
+                    print('{}identificador coherente{}'.format(self.name, self.rango))
+                if self.name == '6':
+                    print('{}identificador de siglo {}'.format(self.name, self.rango))
+                if self.name == '5':
+                    print('{} tiene un numero de trooper {}'.format(self.name, self.rango))
+                if self.name == '4':
+                    print('{}identificador de escuadra{}'.format(self.name, self.rango))
 
+trooper1 = Stormtrooper('TK-421', 10)
+trooper2 = Stormtrooper('8-8-8', 10)
+trooper3 = Stormtrooper('6-6-6', 10)
+lista = [trooper1, trooper2, trooper3]
+print(trooper1)
 
-
-class Stormtrooper(Nave):
-    def __init__(self, nombre, rango):
-        super().__init__()
-        self.nombre = nombre
-        self.rango = rango
-        print("La clase se ha creado con exito!")
-
-    def calificacion(self):
-        codigo_legion = self.codigo
-        identificador_coherte = self.cohoerte
-        identificador_siglo = self.siglo
-        identificador_escuadra = self.escuadra
-        numero_trooper = self.trooper
-        return f"La nave {self.nombre} tiene los siguientes atributos\nEl codigo de la legion es: {codigo_legion}; El identificador coherte: {identificador_coherte}; El identificador siglo: {identificador_siglo}; El identificador escuadra: {identificador_escuadra}; Numero trooper: {numero_trooper}"
-
-    def __str__(self):
-        return f"La nave {self.nombre} tiene los siguientes atributos\nEl codigo de la legion es: {codigo_legion}; El identificador coherte: {identificador_coherte}; El identificador siglo: {identificador_siglo}; El identificador escuadra: {identificador_escuadra}; Numero trooper: {numero_trooper}"
+for i in lista:
+    print(i)

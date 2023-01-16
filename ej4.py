@@ -14,5 +14,5 @@ def usar_la_fuerza(mochila, num_objetos=0):
 
 # Comprobacion
 if __name__=="__main__":
-  lista = ["champiñon","sable de luz","europa","la nueva liga"]
+  lista = ["champiñon","europa","sable de luz", "la nueva liga"]
   print(usar_la_fuerza(lista))
