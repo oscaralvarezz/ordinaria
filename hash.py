@@ -1,3 +1,4 @@
+#Código de tabla Hash
 def crear_tabla(tamanio):
     """Crear una tabla hash vacia"""
     tabla = [None]*tamanio
@@ -16,16 +17,16 @@ def agregar(tabla, dato, convert):
 
     if (tabla[posicion] is None):
         if convert:
-            tabla[posicion] = convert8chr(dato)
+            tabla[posicion] = convert.chr(dato)
         else:
             tabla[posicion] = dato
     else:
         print("Se produjo una colision")
     
-""" Si se produce dicha colision ejectuar funcion de sondeo para reubicar el elemento """
+""" Si se produce dicha colisión, ejecuta función de sondeo para reubicar el elemento """
 
 def buscar(tabla, buscado):
-    """ Determina si un elemento existe en la tabla y determina su posicion. """
+    """ Determina si un elemento existe en la tabla y determina su posición. """
     pos = None
     posicion = funcion_hash(buscado, len(tabla))
     if (tabla[posicion] is not None):
@@ -34,7 +35,7 @@ def buscar(tabla, buscado):
             pos = posicion
 
         else:
-            print("Aplicar funcion de sondeo")
+            print("Aplicar función de sondeo")
 
     return pos
 
@@ -50,7 +51,7 @@ def quitar(tabla, dato):
             tabla[posicion] = None
 
         else:
-            print("Aplicar funcion de sondeo")
-            """Para determinar si esta en otra posicion y quitarlo"""
+            print("Aplicar función de sondeo")
+            """Para determinar si esta en otra posición y quitarlo"""
 
     return dato
