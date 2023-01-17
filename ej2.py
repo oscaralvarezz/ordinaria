@@ -25,7 +25,8 @@ Trooper1 = Stormtrooper('TK-421', 10)
 Trooper2 = Stormtrooper('8-8-8', 10)
 Trooper3 = Stormtrooper('6-6-6', 10)
 Lista = [Trooper1, Trooper2, Trooper3]
+#mostramos por pantalla el Trooper1
 print(Trooper1)
 
-for i in Lista:
-    print(i)
+#for i in Lista:
+    #print(i)
