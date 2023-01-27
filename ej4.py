@@ -1,4 +1,5 @@
 def main():
+  
 #Creamos una función que nos de falso si la mochila esta vacía.
   def usar_la_fuerza(mochila, numero_objetos=0):
     if not mochila:
