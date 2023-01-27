@@ -17,7 +17,7 @@ def agregar(tabla, dato, convert):
 
     if (tabla[posicion] is None):
         if convert:
-            tabla[posicion] = convert.chr(dato)
+            tabla[posicion] = convert8chr(dato)
         else:
             tabla[posicion] = dato
     else:
