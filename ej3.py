@@ -1,4 +1,4 @@
-class ItemsValiosos():
+class ElementosValiosos():
         def __init__(self, peso, nombre, precio, caducidad):
             self.peso = peso
             self.nombre = nombre
@@ -9,22 +9,24 @@ class ItemsValiosos():
         def __str__(self):
             return 'El Artefacto Valioso: {} con un peso de {} Kg, un precio de: {} euros, y una fecha de caducidad: {}'.format(self.nombre, self.peso, self.precio, self.caducidad)
         
-elemento1= ItemsValiosos(10, 'Artefacto 1', 100, '01/01/2020')
-elemento2= ItemsValiosos(20, 'Artefacto 2', 200, '01/01/2020')
-elemento3= ItemsValiosos(30, 'Artefacto 3', 300, '01/01/2020')
+#Asignamos los valores y características de los elementos.
+elemento1= ElementosValiosos(10, 'Artefacto 1', 50, '01/07/2020')
+elemento2= ElementosValiosos(20, 'Artefacto 2', 600, '01/09/2020')
+elemento3= ElementosValiosos(30, 'Artefacto 3', 30, '01/08/2020')
 
-lista = [elemento1, elemento2, elemento3]
-for i in lista: 
+Lista = [elemento1, elemento2, elemento3]
+for i in Lista: 
     print(i)
 
-    def ordenar_lista(lista):
-        lista.sort(key=lambda x: x.caducidad)
-        print(lista)
-    
-    ordenar_lista(lista)
+    #ordenamos la lista que hemos creado anteriormente.
+    def ordenar_lista(Lista):
+        Lista.sort(key=lambda x: x.caducidad)
+        print(Lista)
+    ordenar_lista(Lista)
 
-    def cambiar_precio(item, nuevo_precio):
-        item.precio = nuevo_precio
-        print('{} con nuevo precio de: {} euros'.format(item.nombre, item.precio))
+    #finalmente, creamos una función que nos permita cambiar el precio de un elemento
+    def cambiar_precio(elemento, nuevo_precio):
+        elemento.precio = nuevo_precio
+        print('{} con nuevo precio de: {} euros'.format(elemento.nombre, elemento.precio))
     
-    cambiar_precio(elemento1, 500)
+    cambiar_precio(elemento1, 2000)
