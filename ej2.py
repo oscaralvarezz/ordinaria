@@ -28,5 +28,6 @@ Lista = [Trooper1, Trooper2, Trooper3]
 #mostramos por pantalla el Trooper1
 print(Trooper1)
 
-#for i in Lista:
-    #print(i)
+#ahora mostramos todos los Trooper
+for i in Lista:
+    print(i)
