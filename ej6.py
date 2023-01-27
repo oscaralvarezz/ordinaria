@@ -11,8 +11,6 @@ def generador():
     return lista_naves, naves, numero
 
 
-
-
 naves, nav, numero = generador()
 hash1 = crear_tabla(len(naves))
 hash2 = crear_tabla(len(naves))
@@ -34,16 +32,14 @@ for nave in naves:
     print(f"Las naves son: {nuevas_naves}")
 
 
-
-    # e
-    legion_ct = []
-    legion_tf = []
-    for i in range(len(nav)):
-        if nav[i]=="CT":
-            legion_ct.append(naves[i])
-        elif nav[i]=="TF":
-            legion_tf.append(naves[i])
+legion_ct = []
+legion_tf = []
+for i in range(len(nav)):
+    if nav[i]=="CT":
+        legion_ct.append(naves[i])
+    elif nav[i]=="TF":
+        legion_tf.append(naves[i])
 
 
-    print(f"Las naves que contienen CT son: {legion_ct}")
-    print(f"Las naves que contienen CT son: {legion_tf}")
+print(f"Las naves que contienen CT son: {legion_ct}")
+print(f"Las naves que contienen CT son: {legion_tf}")
